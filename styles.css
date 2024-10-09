@@ -1,0 +1,331 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #EAEAEA;
+    color: #000000;
+}
+
+/* Navbar fixa */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #FC0037;
+}
+
+/* Aplica a fonte Qwitcher Grypen ao <h2> */
+h2 {
+    font-family: "Qwitcher Grypen", cursive; /* Aplica a fonte personalizada */
+    font-size: 150px;
+    opacity: 0; /* Inicialmente invisível */
+    transform: translateX(100px); /* Deslocado para a direita */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Transição suave */
+}
+p {
+    font-family: "roboto", cursive; /* Aplica a fonte personalizada */
+    font-size: 40px;
+    opacity: 0; /* Inicialmente invisível */
+    transform: translateX(100px); /* Deslocado para a direita */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Transição suave */
+}
+
+
+/* Seções */
+.section {
+    padding: 100px 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#home {
+    background: url('assets/bg.jpg') no-repeat center center/cover;
+    position: relative;
+    color: #EAEAEA;
+}
+
+#home .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 50px;
+    border-radius: 10px;
+}
+
+#sobre {
+    background-color: #E2E2E2;
+}
+
+#quem-somos {
+    background-color: #EAEAEA;
+}
+
+#contato {
+    background-color: #FC0037;
+    color:rgb(255, 255, 255);
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.7);
+}
+
+#proposito {
+    background: url('assets/2.webp') no-repeat center center/cover;
+    position: relative;
+    color:rgb(255, 255, 255);
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.7);
+}
+#batismo {
+    background: url('assets/1.webp') no-repeat center center/cover;
+    position: relative;
+    color:rgb(255, 255, 255);
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.7);
+}
+#horario {
+    background: url('assets/3.webp') no-repeat center center/cover;
+    position: relative;
+    color:rgb(255, 255, 255);
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.7);
+}
+#sobre {
+    background: url('assets/4.webp') no-repeat center center/cover;
+    position: relative;
+    color:rgb(255, 255, 255);
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.7);
+}
+#quem-somos {
+    background: url('assets/5.webp') no-repeat center center/cover;
+    position: relative;
+    color:rgb(255, 255, 255);
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.7);
+}
+
+.qwitcher-grypen-regular {
+    font-family: "Qwitcher Grypen", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.qwitcher-grypen-bold {
+    font-family: "Qwitcher Grypen", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+/* Estilos para o carrossel */
+.carousel-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.carousel img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slick-prev,
+.slick-next {
+    background-color: #FC0037;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+    background-color: #FC0037;
+}
+
+.slick-dots li button:before {
+    color: #FC0037;
+}
+
+
+.table-container {
+    margin: 20px 0;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #000000;
+}
+
+.instagram-button {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #e13030; /* Cor do Instagram */
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.instagram-button img {
+    width: 24px; /* Tamanho do ícone */
+    height: 24px;
+    margin-right: 8px; /* Espaçamento entre ícone e texto */
+}
+
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+
+.youtube-button {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #000000;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+
+.whatsapp-button {
+    background-color: #25D366; /* Cor do WhatsApp */
+}
+
+.youtube-button {
+    background-color: #ffffff; /* Cor do YouTube */
+}
+
+.whatsapp-button img{
+    width: 24px; /* Tamanho do ícone */
+    height: 24px;
+    margin-right: 8px; /* Espaçamento entre ícone e texto */
+}
+
+.youtube-button img {
+    width: 24px; /* Tamanho do ícone */
+    height: 17;
+    margin-right: 8px; /* Espaçamento entre ícone e texto */
+}
+
+.maps-iframe {
+    width: 100%;
+    display: block;
+    margin: 20px auto; /* Centraliza o iframe */
+    max-width: 100%; /* Responsivo */
+    height: 50vh; /* Mantém a proporção */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000000;
+    color: #EAEAEA;
+}
+footer p {
+    font-size: 20px;
+}
+
+
+/* Efeitos de animação */
+@keyframes fadeRightToLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeLeftToRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Aplica o fade da direita para a esquerda no <h2> */
+h2 {
+    opacity: 0;
+    /* Inicialmente invisível */
+    transform: translateX(100px);
+    /* Deslocado para a direita */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    /* Transição suave */
+}
+
+/* Aplica o fade da esquerda para a direita no <p> */
+p {
+    opacity: 0;
+    /* Inicialmente invisível */
+    transform: translateX(-100px);
+    /* Deslocado para a esquerda */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    /* Transição suave */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .section {
+        padding: 70px 20px;
+    }
+}
