@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="assets/favicon.png">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css"
+    <link rl="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <script src="script.js" defer></script>
@@ -24,6 +26,10 @@
 <body>
     <header>
         <nav>
+            <div id="logo-container" style="display: flex; align-items: center; justify-content: center;">
+                <!-- A imagem e o texto serão inseridos aqui pelo JavaScript -->
+            </div>
+            <div id="renova"></div>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#sobre">Sobre</a></li>
@@ -40,8 +46,12 @@
     <section id="proposito" class="section">
         <div>
             <h2>Propósito</h2>
-            <p>Nosso propósito é transformar vidas e levar a mensagem de amor e salvação de Cristo a todos. Acreditamos que, juntos, podemos impactar o mundo com fé, esperança e solidariedade.</p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Woz4Bp_YbGo?si=oaistIGYVGIlEPOq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Nosso propósito é transformar vidas e levar a mensagem de amor e salvação de Cristo a todos. Acreditamos
+                que, juntos, podemos impactar o mundo com fé, esperança e solidariedade.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Woz4Bp_YbGo?si=oaistIGYVGIlEPOq"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </section>
 
@@ -72,11 +82,11 @@
                         </tr>
                         <tr>
                             <td>Terça</td>
-                            <td>17:00h às 19:30h</td>
+                            <td>Culto da Palavra 19:15h às 21h15h</td>
                         </tr>
                         <tr>
                             <td>Quarta</td>
-                            <td>Fechado</td>
+                            <td>Culto das Mulheres Renovadas 15:30h às 17:30h</td>
                         </tr>
                         <tr>
                             <td>Quinta</td>
@@ -84,15 +94,23 @@
                         </tr>
                         <tr>
                             <td>Sexta</td>
-                            <td>17:00h às 19:30h</td>
+                            <td>Culto de Curas e Libertação 19:15h às 21:15h</td>
                         </tr>
                         <tr>
                             <td>Sábado</td>
-                            <td>15:00h às 17:00h / 18:00h às 20:00h</td>
+                            <td>Culto dos Jovens 18:00h às 20:00h</td>
                         </tr>
                         <tr>
                             <td>Domingo</td>
-                            <td>16:00h às 18:00h / 18:00h às 21:00h</td>
+                            <td>Culto de Celebração 10:00h às 12:00h | 16:00h às 18:00h / 18:30h às 21:30h</td>
+                        </tr>
+                        <tr>
+                            <td>Todos os dias</td>
+                            <td>Oração da Madrugada 5:00h às 7:00h</td>
+                        </tr>
+                        <tr>
+                            <td>Central de atendimento</td>
+                            <td>8:00h às 18:00h (segunda a sexta) pelo telefone 75 99186-2211</td>
                         </tr>
                     </tbody>
                 </table>
@@ -149,11 +167,45 @@
             <p>Estamos prontos para recebê-lo! Veja onde estamos localizados:</p>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3857.390504211316!2d-38.9563696!3d-12.2170666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71437266f83bc9b%3A0x4b124cd2ea784aa3!2sRenova%20me%20church!5e0!3m2!1spt-BR!2sbr!4vXXXXXXXXXXX"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" class="maps-iframe"></iframe>
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                class="maps-iframe"></iframe>
         </div>
     </section>
-
-
+<!-- Bottom Navigation -->
+<bottom nav class="bottom-nav">
+    <ul>
+        <!-- <li>
+            <a href="#home">
+                <span class="material-icons">home</span>
+                <span>Home</span>
+            </a>
+        </li> -->
+        <li>
+            <a href="#sobre">
+                <span class="material-icons">info</span>
+                <span class="roboto-font">Sobre</span>
+            </a>
+        </li>
+        <li>
+            <a href="#quem-somos">
+                <span class="material-icons">people</span>
+                <span class="roboto-font">Quem Somos</span>
+            </a>
+        </li>
+        <li>
+            <a href="#contato">
+                <span class="material-icons">chat</span>
+                <span class="roboto-font">Contato</span>
+            </a>
+        </li>
+        <li>
+            <a href="#encontre-nos">
+                <span class="material-icons">location_on</span>
+                <span class="roboto-font">Encontre-nos</span>
+            </a>
+        </li>
+    </ul>
+</bottom>
     <footer>
         <p>Endereço: Avenida Noide Cerqueira, 4048, Sim 44085052 Feira de Santana, BA</p>
         <p>&copy; 2024 RENOVA-ME CHURCH — Todos os direitos reservados.</p>

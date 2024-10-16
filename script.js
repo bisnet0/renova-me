@@ -70,3 +70,30 @@ const pElements = document.querySelectorAll('p');
 // Inicia a observação dos elementos
 h2Elements.forEach(h2 => observer.observe(h2));
 pElements.forEach(p => observer.observe(p));
+
+
+function toggleLogo() {
+    const logoContainer = document.getElementById('logo-container');
+    const logoImage = '<img src="assets/logo_church.png" alt="Logo da Renova-me" style="max-width: 20%; height: auto; margin-right: 10px;">';
+    const logoText = '<span style="font-size: 1.8em; font-family: \'Roboto\', sans-serif; font-weight: bold; color: black;">RENOVA-ME</span>';
+
+    if (window.innerWidth <= 768) {
+        logoContainer.innerHTML = logoImage + logoText; // Adiciona a imagem e o texto
+    } else {
+        logoContainer.innerHTML = ''; // Remove a imagem e o texto caso contrário
+    }
+}
+
+// Executa a função ao carregar a página
+window.onload = toggleLogo;
+
+// Adiciona um event listener para redimensionamento da janela
+window.onresize = toggleLogo;
+
+
+// Executa a função ao carregar a página
+window.onload = toggleLogo;
+
+// Adiciona um event listener para redimensionamento da janela
+window.onresize = toggleLogo;
+

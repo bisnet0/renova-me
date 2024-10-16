@@ -5,11 +5,11 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #EAEAEA;
-    color: #000000;
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Isso ajuda a evitar o overflow horizontal */
 }
 
 /* Navbar fixa */
@@ -62,8 +62,8 @@ p {
 
 /* Seções */
 .section {
-    padding: 100px 20px;
-    min-height: 100vh;
+    padding: 0; /* Remover padding para deixar a seção ocupar toda a altura */
+    min-height: 100vh; /* Garantir que a seção ocupe toda a altura da viewport */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -71,57 +71,54 @@ p {
 }
 
 #home {
-    background: url('assets/bg.jpg') no-repeat center center/cover;
-    position: relative;
+    background: url('assets/bg.jpg') no-repeat center center;
+    background-size: cover; /* Cobrir toda a área da seção */
     color: #EAEAEA;
 }
 
-#home .overlay {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 50px;
-    border-radius: 10px;
-}
-
 #sobre {
-    background-color: #E2E2E2;
+    background: url('assets/4.webp') no-repeat center center;
+    background-size: cover; /* Cobrir toda a área da seção */
+    color: rgb(255, 255, 255);
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.7);
 }
 
 #quem-somos {
-    background-color: #EAEAEA;
+    background: url('assets/5.webp') no-repeat center center;
+    background-size: cover; /* Cobrir toda a área da seção */
+    color: rgb(255, 255, 255);
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.7);
 }
 
 #contato {
-    background-color: #FC0037;
-    color:rgb(255, 255, 255);
+    background: linear-gradient(to top, #FC0037, rgba(255, 255, 255, 0.205));
+    color: rgb(255, 255, 255);
     text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.7);
 }
 
 #proposito {
-    background: url('assets/2.webp') no-repeat center center/cover;
-    position: relative;
-    color:rgb(255, 255, 255);
+    background: url('assets/2.webp') no-repeat center center;
+    background-size: cover; /* Cobrir toda a área da seção */
+    color: rgb(255, 255, 255);
     text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.7);
 }
+
 #batismo {
-    background: url('assets/1.webp') no-repeat center center/cover;
-    position: relative;
-    color:rgb(255, 255, 255);
+    background: url('assets/1.webp') no-repeat center center;
+    background-size: cover; /* Cobrir toda a área da seção */
+    color: rgb(255, 255, 255);
     text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.7);
 }
+
 #horario {
-    background: url('assets/3.webp') no-repeat center center/cover;
-    position: relative;
-    color:rgb(255, 255, 255);
+    background: url('assets/3.webp') no-repeat center center;
+    background-size: cover; /* Cobrir toda a área da seção */
+    color: rgb(255, 255, 255);
     text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.7);
 }
-#sobre {
-    background: url('assets/4.webp') no-repeat center center/cover;
-    position: relative;
-    color:rgb(255, 255, 255);
-    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.7);
-}
-#quem-somos {
-    background: url('assets/5.webp') no-repeat center center/cover;
+
+#encontre-nos {
+    background: url('assets/6.webp') no-repeat center center/cover;
     position: relative;
     color:rgb(255, 255, 255);
     text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.7);
@@ -140,37 +137,6 @@ p {
 }
 
 
-/* Estilos para o carrossel */
-.carousel-container {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 40px 0;
-}
-
-.carousel img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.slick-prev,
-.slick-next {
-    background-color: #FC0037;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-}
-
-.slick-prev:hover,
-.slick-next:hover {
-    background-color: #FC0037;
-}
-
-.slick-dots li button:before {
-    color: #FC0037;
-}
-
-
 .table-container {
     margin: 20px 0;
     overflow-x: auto;
@@ -185,8 +151,9 @@ table {
 
 th, td {
     padding: 10px;
-    text-align: left;
+    text-align: center;
     border-bottom: 1px solid #ddd;
+    font-family: 'Roboto', sans-serif;
     
 }
 
@@ -262,6 +229,10 @@ th {
     height: 50vh; /* Mantém a proporção */
 }
 
+a{
+    font-family: 'Roboto', sans-serif;
+}
+
 /* Footer */
 footer {
     text-align: center;
@@ -272,6 +243,8 @@ footer {
 footer p {
     font-size: 20px;
 }
+
+
 
 
 /* Efeitos de animação */
@@ -320,12 +293,131 @@ p {
 }
 
 /* Responsividade */
+
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
+    nav{
+        background-color: white;
+        
+        padding-bottom: 5px;
+    }
+    nav ul{
+        display: none;
+        
+    }
+
+    
+
+    .roboto-font {
+        font-family: 'Roboto', sans-serif;
+        font-size: 12px;
     }
 
     .section {
-        padding: 70px 20px;
+        flex-direction: column; 
+        padding: 20px; 
+        margin: 10px; 
+        border-radius: 10px; 
+        background: rgba(255, 255, 255, 0.8); /* Fundo branco sem blur para mobile */
+        position: relative; 
+        overflow: hidden; 
     }
+
+    h2 {
+        font-size: 80px; 
+        margin-bottom: 10px; 
+    }
+
+    p {
+        font-size: 16px; 
+        line-height: 1.5; 
+    }
+
+    /* Ajuste do iframe */
+    iframe {
+        width: 100%; 
+        height: auto; 
+        max-width: 300px; 
+        margin: 0 auto; 
+    }
+
+    #home{
+        display: none;
+    }
+
+    #proposito{
+        padding-top: 80px;
+    }
+
+    /* Efeito de blur nos backgrounds das seções */
+     #sobre, #quem-somos, #contato, #proposito, #batismo, #horario, #encontre-nos{
+        backdrop-filter: blur(5px); /* Aplicar um blur leve */
+        color: #EAEAEA; 
+        position: relative; 
+        z-index: 1;
+    }
+
+    /* Camada de cor para melhor legibilidade do texto */
+    #sobre:before, #quem-somos:before, #contato:before, #proposito:before, #batismo:before, #horario:before, #encontre-nos::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5); /* Camada escura para contraste */
+        z-index: -1; 
+    }
+
+     #sobre, #quem-somos, #contato, #proposito, #batismo, #horario, #encontre-nos{
+        min-height: auto; 
+        background-size: cover; 
+        background-position: center;
+        background-repeat: no-repeat;
+        border: none; 
+    }
+
+    .bottom-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #000000;
+        color: #fff;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+    
+    .bottom-nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .bottom-nav li {
+        flex: 1;
+        text-align: center;
+    }
+
+    .bottom-nav a {
+        text-decoration: none;
+        color: #fff; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #click-plug-to-support{
+       margin-top: -50px !important;
+       background-color: red !important;
+    }
+
+    footer {
+        margin-bottom: 53px;
+    }
+
 }
